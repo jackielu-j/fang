@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>房贷计算器</title>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script src="js/index.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="main">
+	<div class="main_inner">
+    	<div class="title"><h2>购房贷款计算器</h2></div>
+        <div class="phone"><a href="#"></a></div>
+        <div>
+        	<ul class="nav clearfix">
+            	<li style="width:84px;" class="ac">贷款计算器</li>
+                <li style="width:136px">公积金贷款计算器</li>
+                <li style="width:119px">提前还款计算器</li>
+                <li style="width:86px">税费计算器</li>
+                <li style="width:118px">装修贷款计算器</li>
+                <li style="width:118px;margin-right:0;float:none;margin-left:563px;">购房能力评估计算器</li>
+            </ul>
+            <div class="cont">
+            	<div class="cont_item">
+                    <form action="">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="left">
+                                        <h3>请您填写</h3>
+                                        <div class="type">
+                                            <div class="formCont">
+                                                贷款类别：<label><input type="radio" name="type" checked="checked" value="商业贷款"/> 商业贷款</label><label><input type="radio" name="type" value="公积金贷款"/> 公积金贷款</label><label><input type="radio" name="type"/> 组合型贷款</label>
+                                            </div>
+                                        </div>
+                                        <div class="calc">
+                                            <h5>计算方式</h5>
+                                            <div class="formCont">
+                                                <p><label><input type="radio" name="calc" checked="checked" value="areaPrice"/> 根据面积、单价计算</label></p>
+                                                <div class="calcWay1 calcWay">
+                                                    <p>单价：<input type="text" id="unitPrice"/> 元/平方米</p><span>*请输入数字</span>
+                                                    <p>面积：<input type="text" id="area"/> 平方米</p><span>*请输入数字</span>
+                                                    <div class="percent">按揭成数： <select>
+                                                        <option>9成</option>
+                                                        <option>8成</option>
+                                                        <option selected>7成</option>
+                                                        <option>6成</option>
+                                                        <option>5成</option>
+                                                        <option>4成</option>
+                                                        <option>3成</option>
+                                                        <option>2成</option>
+                                                    </select></div>
+                                                </div>
+                                                <p><label><input type="radio" name="calc" value="total"/> 根据贷款总额计算</label></p>
+                                                <div class="calcWay2 calcWay">
+                                                    贷款总额：<input type="text" id="total"/> 元<br><span>　　　　　*请输入数字</span>
+                                                </div>
+                                                <div class="time">按揭年数： <select id="year"><option selected="selected" name="36">4年(36期)</option><option name="240">20年(240期)</option></select></div>
+                                            </div>
+                                        </div>
+                                        <div class="rate">
+                                            <div class="formCont">
+                                                <p>贷款利率：<select>
+                                                    <option>15年10月24日基准利率</option>
+                                                    <option>15年8月26日基准利率</option>
+                                                    <option>15年6月28日基准利率</option>
+                                                    <option>15年5月11日基准利率</option>
+                                                </select></p>
+                                                <div><input type="text" id="rate" value="5.75"/> %</div>
+                                            </div>
+                                        </div>
+                                        <div class="return">
+                                            <div class="formCont">
+                                                还款方式：<label><input type="radio" name="return" checked="checked"/> 等额本息</label> <label><input type="radio" name="return"/> 等额本金</label>
+                                            </div>
+                                        </div>
+                                        <div class="btn clearfix"><a href="#" id="calcBtn"></a><a href="#" id="reset"></a></div>
+                                    </td>
+                                    <td class="mid"></td>
+                                    <td class="right">
+                                        <h3>查看结果</h3>
+                                        <ul id="result">
+                                            <li>　房款总额：<input type="text"/>元</li>
+                                            <li>　贷款总额：<input type="text"/>元</li>
+                                            <li>　还款总额：<input type="text"/>元</li>
+                                            <li>支付利息款：<input type="text"/>元</li>
+                                            <li>　首期付款：<input type="text"/>元</li>
+                                            <li>　贷款月数：<input type="text"/></li>
+                                            <li>　月均还款：<input type="text"/>元</li>
+                                        </ul>
+                                        <p>*以上结果仅供参考</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+                <div class="cont_item" style="display: none">公积金贷款计算器页面</div>
+                <div class="cont_item" style="display: none">提前还款计算器页面</div>
+                <div class="cont_item" style="display: none">税费计算器页面</div>
+                <div class="cont_item" style="display: none">装修贷款计算器页面</div>
+                <div class="cont_item" style="display: none">购房能力评估计算器页面</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
